@@ -2,6 +2,12 @@
     color: #ff4f33;
 }
 
+.chores p {
+    font-weight: bold;
+    color: darkred;
+    /* text-align: center; */
+}
+
 .doneChores {
     color: #3c79b8;
 }
