@@ -12,7 +12,7 @@
         <li *ngFor = 'let done of finishedChores'>{{done}}</li>
     </ul>
     <div class="targetAndArrow" *ngIf = "chores.length === 0 || (finishedChores.length - chores.length) >= 3; else noAllowance">
-        <img src= 'https://cdn.pixabay.com/photo/2017/02/16/10/20/target-2070972_1280.png'>
+        <img src= '{{targetImage}}'>
     </div>
     
     <ng-template #noAllowance>
