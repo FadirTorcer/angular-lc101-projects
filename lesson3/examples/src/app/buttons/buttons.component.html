@@ -9,7 +9,12 @@
 
 <div class="buttons">
    <h3>Joke {{buttonHeading}}</h3>
-   <button [class.frustrater]="!inactive" [disabled]="inactive" (mouseover)="inactive = true" (mouseout)="inactive = false">Frustration Incarnate!</button>
+   <div>
+   <button [class.gold]="!inactive" [disabled]="inactive" (mouseover)="inactive = true" (mouseout)="inactive = false">Frustration Incarnate!</button>
+   </div>
+   
    <hr />
-   <button (mouseover)="switchPosition()">Catch Me!</button>
+   <div [align]="location" (mouseover)="location = switchPosition(location)">
+      <button class="silver">Catch Me!</button>
+   </div>
 </div>

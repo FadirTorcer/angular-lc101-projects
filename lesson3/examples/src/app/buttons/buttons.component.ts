@@ -12,7 +12,7 @@ export class ButtonsComponent implements OnInit {
    copperInactive: boolean = false;
 
    inactive: boolean = false;
-   changePosition: boolean = false;
+   location: string = 'center';
 
    constructor() { }
 
@@ -24,8 +24,11 @@ export class ButtonsComponent implements OnInit {
       this.copperInactive = false;
    }
 
-   switchPosition () {
-      
+   switchPosition (oldLocation: string) {
+      while (this.location === oldLocation) {
+         this.location = ['left', 'right', 'center'][Math.floor(Math.random()*3)];
+      }
+      return this.location;
    }
 
 }
